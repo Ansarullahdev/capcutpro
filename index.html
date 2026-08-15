@@ -3,141 +3,476 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="mtnHOVTTVzIIyABWUWlnO0Ida0VwtfubOJ-mYnSOIj4" />
-<title>CapCut Pro Features Explained (2026 Guide)</title>
+<meta name="google-site-verification" content="DO83X-XmPeUykNPRvDlTn4tdx9NF-KC0vUZsAy7A_p0" />
+<meta name="description" content="A complete, fact-checked breakdown of CapCut's Free, Standard, and Pro plans in 2026 — what each tier actually includes, current pricing, and how to decide which one fits your workflow." />
+<title>CapCut Free vs Standard vs Pro (2026): Complete Feature & Pricing Guide</title>
 <style>
+  :root {
+    --navy: #0b1220;
+    --navy-2: #121b2e;
+    --card: #16203a;
+    --border: #263352;
+    --text: #e7ebf5;
+    --text-dim: #9aa5c0;
+    --gold: #f0b840;
+    --teal: #35d0c0;
+    --gold-teal: linear-gradient(120deg, #f0b840, #35d0c0);
+  }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--navy);
+    color: var(--text);
     line-height: 1.7;
-    color: #1c1d24;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 40px 20px 80px;
-    background: #fafafa;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  .hero {
+    padding: 70px 0 50px;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(240,184,64,0.12), transparent 45%),
+      radial-gradient(circle at 85% 10%, rgba(53,208,192,0.14), transparent 45%);
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold-teal);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
   }
   h1 {
-    font-size: 32px;
-    margin-bottom: 6px;
-    background: linear-gradient(135deg, #FE2C55, #25F4EE);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
   }
-  .meta {
-    color: #7d7e8c;
-    font-size: 14px;
-    margin-bottom: 32px;
+  .lede {
+    font-size: 18px;
+    color: var(--text-dim);
+    max-width: 640px;
   }
+  .updated {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+
+  /* TOC */
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin: 36px 0;
+  }
+  .toc h2 { font-size: 15px; margin: 0 0 12px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
+  .toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 30px; }
+  .toc li { margin-bottom: 8px; font-size: 14.5px; }
+  .toc a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--text-dim); }
+  .toc a:hover { color: var(--teal); border-bottom-color: var(--teal); }
+
+  section { padding: 46px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+
   h2 {
-    font-size: 22px;
-    margin-top: 40px;
-    color: #161823;
+    font-size: 26px;
+    margin: 0 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
-  p { margin: 16px 0; }
-  ul { padding-left: 22px; }
+  h2 .num {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    background: var(--gold-teal);
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  h3 { font-size: 19px; margin: 28px 0 10px; color: var(--text); }
+  p { margin: 14px 0; color: var(--text); }
+  p.dim { color: var(--text-dim); }
+  ul, ol.plain { padding-left: 22px; }
   li { margin: 8px 0; }
-  .callout {
-    background: #fff;
-    border-left: 4px solid #FE2C55;
-    padding: 16px 20px;
-    border-radius: 6px;
-    margin: 28px 0;
+
+  a.inline-link {
+    color: var(--gold);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(240,184,64,0.35);
   }
+  a.inline-link:hover { border-bottom-color: var(--gold); }
+
+  /* Plan cards */
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+  @media (max-width: 720px) { .plans { grid-template-columns: 1fr; } }
+  .plan-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+  }
+  .plan-card.highlight {
+    border-color: var(--gold);
+    background: linear-gradient(180deg, rgba(240,184,64,0.08), var(--card) 40%);
+  }
+  .plan-name { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); margin-bottom: 6px; }
+  .plan-price { font-size: 26px; font-weight: 800; margin-bottom: 4px; }
+  .plan-price span { font-size: 13px; font-weight: 400; color: var(--text-dim); }
+  .plan-note { font-size: 12.5px; color: var(--text-dim); margin-bottom: 14px; }
+  .plan-card ul { padding-left: 18px; margin: 0; font-size: 14px; }
+  .plan-card li { margin: 6px 0; }
+
+  /* Comparison table */
   table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
   }
-  th, td {
-    text-align: left;
-    padding: 10px 12px;
-    border-bottom: 1px solid #e2e2e6;
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+  th { color: var(--text-dim); font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.04em; background: rgba(255,255,255,0.02); }
+  tr:last-child td { border-bottom: none; }
+  td.yes { color: var(--teal); font-weight: 700; }
+  td.no { color: var(--text-dim); }
+
+  /* Callout */
+  .callout {
+    background: var(--card);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 14.5px;
   }
-  th { color: #7d7e8c; font-weight: 600; }
-  a {
-    color: #FE2C55;
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 2px solid rgba(254,44,85,0.3);
+  .callout strong { color: var(--teal); }
+  .callout.warn { border-left-color: var(--gold); }
+  .callout.warn strong { color: var(--gold); }
+
+  /* AI tool grid */
+  .ai-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 20px 0;
   }
-  a:hover { border-bottom-color: #FE2C55; }
+  @media (max-width: 640px) { .ai-grid { grid-template-columns: 1fr; } }
+  .ai-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .ai-item .t { font-weight: 700; font-size: 14.5px; margin-bottom: 4px; }
+  .ai-item .d { font-size: 13.5px; color: var(--text-dim); }
+
+  /* FAQ */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-weight: 700; font-size: 15.5px; margin-bottom: 8px; }
+  .faq-a { color: var(--text-dim); font-size: 14.5px; }
+
   footer {
-    margin-top: 50px;
+    padding: 36px 0 60px;
     font-size: 12.5px;
-    color: #9a9ba7;
-    border-top: 1px solid #e2e2e6;
-    padding-top: 20px;
+    color: var(--text-dim);
   }
+  footer a { color: var(--text-dim); }
 </style>
 </head>
 <body>
 
-<h1>CapCut Pro: What You Actually Get in 2026</h1>
-<p class="meta">A breakdown of CapCut's real feature set, editing tools, and premium tier — for creators deciding whether to upgrade.</p>
-
-<p>
-CapCut has grown from a simple mobile video trimmer into a full editing suite used by
-short-form creators, marketers, and hobbyists alike. The free version already covers the
-basics well, but <a href="https://capcutproapps.com/" target="_blank" rel="noopener">capcut pro</a>
-unlocks a noticeably deeper toolkit for anyone editing regularly.
-</p>
-
-<h2>What's included in the free version</h2>
-<p>
-CapCut's free tier is genuinely capable. It includes a multi-track timeline, cut and split
-tools, keyframe animation, chroma key, basic stabilization, a large library of free music
-and sound effects, filters, basic effects, and AI voiceover with text-to-speech. For casual
-editing at 1080p, most people never need to upgrade.
-</p>
-
-<h2>What the Pro tier adds</h2>
-<p>
-The paid tier is built for people editing daily or working with clients. The core additions are:
-</p>
-<ul>
-  <li><strong>4K export</strong> without the resolution cap the free plan imposes</li>
-  <li><strong>Full AI toolkit</strong> — background removal, motion/camera tracking, noise reduction, speaker-ID captions, and AI voice tools</li>
-  <li><strong>Expanded cloud storage</strong> for syncing projects across devices</li>
-  <li><strong>Premium asset library</strong> — a much larger catalog of templates, transitions, fonts, stickers, and royalty-free music</li>
-  <li><strong>Commercial licensing</strong> for premium assets, which matters for anyone doing client or brand work</li>
-  <li><strong>Team collaboration features</strong> on higher plans</li>
-</ul>
-
-<div class="callout">
-  <strong>Worth knowing:</strong> CapCut restructured its pricing in early 2026, splitting
-  the old single paid tier into "Standard" (watermark removal, mostly mobile-focused) and
-  "Pro" (the full AI toolkit, 4K, and expanded storage). If you specifically want the AI
-  features, make sure you're looking at the Pro tier and not Standard.
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Updated for 2026</span>
+    <h1>CapCut Free vs Standard vs Pro:<br>What You Actually Get</h1>
+    <p class="lede">
+      CapCut's pricing was restructured in 2025, splitting the old single paid tier into
+      Standard and Pro. This guide breaks down exactly what each plan includes today, what
+      changed, and how to figure out whether you need to pay at all.
+    </p>
+    <div class="updated"><span class="dot"></span> Fact-checked against CapCut's official pricing pages, August 2026</div>
+  </div>
 </div>
 
-<h2>Free vs. Standard vs. Pro at a glance</h2>
-<table>
-  <tr><th>Feature</th><th>Free</th><th>Standard</th><th>Pro</th></tr>
-  <tr><td>Basic editing tools</td><td>✔</td><td>✔</td><td>✔</td></tr>
-  <tr><td>Watermark-free export</td><td>—</td><td>✔</td><td>✔</td></tr>
-  <tr><td>4K export</td><td>—</td><td>—</td><td>✔</td></tr>
-  <tr><td>Full AI toolkit</td><td>Limited</td><td>Limited</td><td>✔</td></tr>
-  <tr><td>Expanded cloud storage</td><td>—</td><td>Limited</td><td>✔</td></tr>
-  <tr><td>Commercial license</td><td>—</td><td>—</td><td>✔</td></tr>
-</table>
+<div class="wrap">
 
-<h2>Is upgrading worth it?</h2>
-<p>
-It depends on your workflow. If you only use free templates and export at 1080p, the free
-plan covers you. If you rely on CapCut's AI tools, need 4K output, or need commercial rights
-for client work, the Pro tier is where that value actually sits — it's the tier the AI
-features live in after the 2026 restructure.
-</p>
-<p>
-CapCut uses a subscription model rather than a one-time purchase, so access to Pro features
-depends on an active subscription. Projects you've already exported keep whatever quality
-they were exported at, even after a subscription lapses.
-</p>
+  <div class="toc">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#what-is-capcut">What is CapCut</a></li>
+      <li><a href="#free-tier">The free plan, in detail</a></li>
+      <li><a href="#standard-tier">Standard tier explained</a></li>
+      <li><a href="#pro-tier">Pro tier explained</a></li>
+      <li><a href="#comparison">Full comparison table</a></li>
+      <li><a href="#ai-tools">The AI toolkit</a></li>
+      <li><a href="#pricing">Current pricing by plan</a></li>
+      <li><a href="#worth-it">Is upgrading worth it?</a></li>
+      <li><a href="#tips">Tips before you subscribe</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </div>
+
+  <section id="what-is-capcut">
+    <h2><span class="num">1</span>What is CapCut?</h2>
+    <p>
+      CapCut is ByteDance's video editing app, available on mobile (iOS/Android), desktop
+      (Windows/macOS), and as a browser-based web editor at capcut.com. It started as a
+      lightweight mobile trimmer built to pair naturally with TikTok, and has since grown
+      into a genuinely full-featured editor: multi-track timelines, keyframe animation,
+      AI-assisted tools, and a large library of templates, transitions, and effects.
+    </p>
+    <p>
+      Its core appeal hasn't changed — a clean interface that doesn't require prior editing
+      experience, combined with AI tools that used to require real skill or dedicated
+      software (background removal, auto-captioning, noise reduction) now sitting one tap away.
+    </p>
+    <div class="callout warn">
+      <strong>Download safely.</strong> The only reliable source for CapCut is the official
+      app stores (Google Play, Apple App Store) or capcut.com directly. Third-party
+      "modded" or "unlocked" APK sites frequently bundle adware or malware disguised as a
+      free upgrade — there's no safe shortcut around the official subscription for paid features.
+    </div>
+  </section>
+
+  <section id="free-tier">
+    <h2><span class="num">2</span>The free plan, in detail</h2>
+    <p>
+      CapCut's free tier remains one of the most generous in mobile video editing, and for a
+      lot of casual creators, it's genuinely all they'll ever need.
+    </p>
+    <ul>
+      <li>Multi-track timeline editing with cut, split, and trim tools</li>
+      <li>Keyframe animation and speed ramping</li>
+      <li>Chroma key (green screen) and basic stabilization</li>
+      <li>A large library of free music, sound effects, filters, and effects</li>
+      <li>Basic AI voiceover with text-to-speech</li>
+      <li>1080p export</li>
+    </ul>
+    <p class="dim">
+      The catch: since the 2025 restructure, more templates and effects are marked
+      "Pro-only" than before, and using a Pro-tagged asset on the free plan exports with a
+      watermark.
+    </p>
+  </section>
+
+  <section id="standard-tier">
+    <h2><span class="num">3</span>Standard tier explained</h2>
+    <p>
+      Standard sits between free and Pro, and is aimed primarily at mobile users who just
+      want the watermark gone.
+    </p>
+    <ul>
+      <li>Removes the watermark from Pro-tagged templates and effects</li>
+      <li>Unlocks additional templates, transitions, and text styles</li>
+      <li>Sold mainly through app stores, monthly billing only in most regions</li>
+    </ul>
+    <p class="dim">
+      What it doesn't include: 4K export, the full AI toolkit, or the larger cloud storage
+      allowance — those are Pro-only.
+    </p>
+  </section>
+
+  <section id="pro-tier">
+    <h2><span class="num">4</span>Pro tier explained</h2>
+    <p>
+      <a href="https://capcutproapps.com/" class="inline-link" target="_blank" rel="noopener">capcut pro</a>
+      is where CapCut's full toolkit actually lives. Since the restructure, this is the tier
+      that includes the AI-heavy features, not Standard — a common point of confusion, since
+      the old "Pro" name used to cover what's now split across two tiers.
+    </p>
+    <ul>
+      <li>4K export (up from the 1080p cap on Free and Standard)</li>
+      <li>The complete AI toolkit — see the breakdown below</li>
+      <li>Roughly 1TB of cloud storage for syncing projects across devices</li>
+      <li>Full premium template, transition, font, and music library, with commercial licensing</li>
+      <li>Faster export processing on longer or higher-resolution projects</li>
+    </ul>
+  </section>
+
+  <section id="comparison">
+    <h2><span class="num">5</span>Full comparison table</h2>
+    <table>
+      <tr><th>Feature</th><th>Free</th><th>Standard</th><th>Pro</th></tr>
+      <tr><td>Multi-track editing</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+      <tr><td>Watermark-free export</td><td class="no">No</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+      <tr><td>Max export resolution</td><td class="no">1080p</td><td class="no">1080p</td><td class="yes">4K</td></tr>
+      <tr><td>Full AI toolkit</td><td class="no">Limited</td><td class="no">Limited</td><td class="yes">Yes</td></tr>
+      <tr><td>Cloud storage</td><td class="no">Minimal</td><td class="no">Limited</td><td class="yes">~1TB</td></tr>
+      <tr><td>Commercial asset license</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
+      <tr><td>Team collaboration</td><td class="no">No</td><td class="no">No</td><td class="yes">Team plan</td></tr>
+    </table>
+    <p class="dim">Feature availability can vary slightly by region and platform — always confirm on your account's in-app upgrade screen before subscribing.</p>
+  </section>
+
+  <section id="ai-tools">
+    <h2><span class="num">6</span>The AI toolkit (Pro)</h2>
+    <p>
+      This is the part that actually justifies Pro's price for a lot of creators — tasks
+      that used to require dedicated software or real editing skill are now one-click.
+    </p>
+    <div class="ai-grid">
+      <div class="ai-item">
+        <div class="t">Background removal</div>
+        <div class="d">Isolate a subject without a green screen, useful for talking-head or product shots.</div>
+      </div>
+      <div class="ai-item">
+        <div class="t">Motion & camera tracking</div>
+        <div class="d">Attach text, stickers, or effects to a moving subject automatically.</div>
+      </div>
+      <div class="ai-item">
+        <div class="t">Auto captions with speaker ID</div>
+        <div class="d">Generates timed captions and distinguishes between multiple speakers.</div>
+      </div>
+      <div class="ai-item">
+        <div class="t">AI noise reduction</div>
+        <div class="d">Cleans up background noise from phone-mic audio without a separate audio tool.</div>
+      </div>
+      <div class="ai-item">
+        <div class="t">AI voice tools</div>
+        <div class="d">Expanded text-to-speech voices and voice cloning options beyond the free tier's basics.</div>
+      </div>
+      <div class="ai-item">
+        <div class="t">Smart reframe</div>
+        <div class="d">Automatically reframes a video for different aspect ratios (9:16, 1:1, 16:9) while keeping the subject centered.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2><span class="num">7</span>Current pricing by plan</h2>
+    <div class="plans">
+      <div class="plan-card">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">$0</div>
+        <div class="plan-note">No card required</div>
+        <ul>
+          <li>Full basic editor</li>
+          <li>1080p export</li>
+          <li>Watermark on Pro-tagged assets</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Standard</div>
+        <div class="plan-price">~$9.99<span>/mo</span></div>
+        <div class="plan-note">Monthly billing only, most regions</div>
+        <ul>
+          <li>Watermark removed</li>
+          <li>More templates & transitions</li>
+          <li>Still capped at 1080p</li>
+        </ul>
+      </div>
+      <div class="plan-card highlight">
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">~$19.99<span>/mo</span></div>
+        <div class="plan-note">or ~$179.99/year (~$15/mo effective)</div>
+        <ul>
+          <li>4K export</li>
+          <li>Full AI toolkit</li>
+          <li>~1TB cloud storage</li>
+          <li>Commercial license</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Prices vary by region and checkout channel.</strong> CapCut doesn't publish one
+      fixed global price — the numbers above are USD web-checkout reference points. Buying
+      through the iOS or Android app store is often several dollars more per month than
+      buying directly through capcut.com. Always check the exact renewal price shown on your
+      own signed-in account before subscribing.
+    </div>
+  </section>
+
+  <section id="worth-it">
+    <h2><span class="num">8</span>Is upgrading worth it?</h2>
+    <p>
+      The honest answer: it depends entirely on whether you actually hit the free plan's
+      limits, not on the plan's name or marketing.
+    </p>
+    <h3>Stay on Free if:</h3>
+    <p class="dim">You're editing casually, exporting at 1080p is fine, and you don't mind CapCut's own watermark on premium-tagged assets.</p>
+    <h3>Standard makes sense if:</h3>
+    <p class="dim">You just want the watermark gone and don't need 4K or the AI toolkit — common for mobile-only creators posting straight to TikTok/Reels.</p>
+    <h3>Pro makes sense if:</h3>
+    <p class="dim">You're producing regularly, need 4K for client work, rely on the AI tools weekly, or need commercial licensing for brand/client projects. At that point the time saved on tasks like auto-captioning or background removal usually outweighs the subscription cost.</p>
+    <p>
+      A simple test that works well in practice: run one real project on the free plan
+      first. Note exactly where you hit a wall — a watermark you can't remove, a resolution
+      cap, an AI feature that's locked. If that same wall keeps showing up project after
+      project, that's the actual signal to upgrade — not the plan name.
+    </p>
+  </section>
+
+  <section id="tips">
+    <h2><span class="num">9</span>Tips before you subscribe</h2>
+    <ul>
+      <li><strong>Compare checkout channels.</strong> Web checkout via capcut.com is often meaningfully cheaper than subscribing through the iOS or Android app store, since app stores add their own commission.</li>
+      <li><strong>Annual billing saves the most.</strong> Pro's annual plan works out to roughly $15/month effective, versus $19.99 billed monthly.</li>
+      <li><strong>Cancel through the channel you subscribed on.</strong> If you subscribed via the App Store or Play Store, you have to cancel there — cancelling inside CapCut's own app won't stop the billing.</li>
+      <li><strong>Check for a free trial.</strong> A 7-day trial is available in some regions — worth testing the AI toolkit properly before committing to a year.</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2><span class="num">10</span>Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">What's the actual difference between Standard and Pro?</div>
+      <div class="faq-a">Standard mainly removes the watermark and unlocks more templates. Pro adds 4K export, the full AI toolkit, much larger cloud storage, and commercial licensing — the AI features specifically only live in Pro.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I edit and export without ever paying?</div>
+      <div class="faq-a">Yes. The free plan covers a complete basic editing workflow at 1080p. You'll only see a watermark if you use a template or effect specifically tagged as Pro.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Why did CapCut's pricing change so much recently?</div>
+      <div class="faq-a">CapCut restructured its subscriptions between late 2025 and early 2026, splitting the old single paid tier into Standard and Pro, and roughly doubling the top-tier price in the process. If you last checked the price a year or more ago, it's changed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is there a lifetime or one-time-purchase option?</div>
+      <div class="faq-a">No — both Standard and Pro are subscription-only, billed monthly or annually. There's no current one-time-purchase plan.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Does the price change by country?</div>
+      <div class="faq-a">Yes. CapCut uses regional pricing, so users in different markets can pay noticeably different amounts for the same plan. The renewal total shown on your own signed-in checkout is the number that actually applies to you.</div>
+    </div>
+  </section>
+
+</div>
 
 <footer>
-  Guide last checked against CapCut's official pricing and feature pages, August 2026.
+  <div class="wrap">
+    This guide reflects publicly available CapCut pricing and feature information as of
+    August 2026. CapCut sets pricing by region, platform, and promotion, so always confirm
+    the exact current price on your own account's upgrade screen before subscribing.
+  </div>
 </footer>
 
 </body>
